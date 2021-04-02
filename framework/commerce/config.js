@@ -10,6 +10,8 @@ const prettier = require('prettier')
 const PROVIDERS = ['bigcommerce', 'shopify']
 
 function getProviderName() {
+  console.log('DOMAIN:', process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN)
+  console.log('TOKEN:', process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_ACCESS_TOKEN)
   return (
     process.env.COMMERCE_PROVIDER ||
     (process.env.BIGCOMMERCE_STOREFRONT_API_URL
